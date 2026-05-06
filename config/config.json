@@ -1,0 +1,11 @@
+{
+  "symbols": ["NVDA", "AAPL", "GOOGL", "MSFT", "TSLA"],
+  "start_date": "2024-01-01",
+  "end_date": "2025-01-01",
+  "db_host": "localhost",
+  "db_port": 5432,
+  "db_name": "stock_data",
+  "db_user": "postgres",
+  "db_password": "password",
+  "log_path": "pipelines/pipeline.log"
+}

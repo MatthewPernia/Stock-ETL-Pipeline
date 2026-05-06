@@ -1,5 +1,4 @@
--- SQLite schema for the stock ETL pipeline (run once per database)
-
+-- SQL schema for raw_daily_prices table
 CREATE TABLE IF NOT EXISTS raw_daily_prices (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     symbol TEXT NOT NULL,
@@ -9,7 +8,6 @@ CREATE TABLE IF NOT EXISTS raw_daily_prices (
     low REAL,
     close REAL,
     adj_close REAL,
-    volume INTEGER,
-    ingested_at TEXT NOT NULL DEFAULT (datetime('now')),
+    date_added TEXT NOT NULL DEFAULT (datetime('now')),
     UNIQUE (symbol, date)
 );
